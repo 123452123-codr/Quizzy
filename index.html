@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quizzy</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Quiz on Important Facts</h1>
+        <div class="quiz-container">
+            <div id="quiz"></div>
+        </div>
+        <button id="previous">Previous Question</button>
+        <button id="next">Next Question</button>
+        <button id="submit">Submit Quiz</button>
+        <div id="results"></div>
+    </body>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDodiBUiarLEaXPnz47v1xGWDb4NchBpCc",
+            authDomain: "quizzy-cbc2e.firebaseapp.com",
+            databaseURL: "https://quizzy-cbc2e-default-rtdb.firebaseio.com",
+            projectId: "quizzy-cbc2e",
+            storageBucket: "quizzy-cbc2e.appspot.com",
+            messagingSenderId: "410760209039",
+            appId: "1:410760209039:web:df311a618510cc892a06fa",
+            measurementId: "G-GPFKDWBS4Z"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</html>
