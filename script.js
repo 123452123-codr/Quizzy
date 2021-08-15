@@ -149,74 +149,74 @@
           correctAnswer: a3
         },
         {
-            question: "In which country did the Olympics originate?",
+            question: "What colors are the Olympic rings?",
             answers: {
-              a: "India",
-              b: "Greece",
-              c: "Pakistan",
-              d: "U.S."
+              a: "Blue, yellow, black, green and red",
+              b: "Yellow, black, green, red and blue",
+              c: "Black, green, red, blue and yellow",
+              d: "Red, blue, yellow, black and green"
             },
-            correctAnswer: a3
+            correctAnswer: a4
           },
           {
-            question: "In which country did the Olympics originate?",
+            question: "Which country has hosted the most Olympic games?",
             answers: {
-              a: "India",
-              b: "Greece",
-              c: "Pakistan",
-              d: "U.S."
+              a: "United States",
+              b: "India",
+              c: "United Kingdom",
+              d: "Japan"
             },
-            correctAnswer: a3
+            correctAnswer: a5
           },
           {
-            question: "In which country did the Olympics originate?",
+            question: " Which four years have seen the Olympics canceled?",
             answers: {
-              a: "India",
-              b: "Greece",
-              c: "Pakistan",
-              d: "U.S."
+              a: "1916, 1940, 1944 and 2020",
+              b: "1900, 1926 ,2016 and 2020",
+              c: "1996, 2000, 2008, 2020",
+              d: "1924, 1938, 1996, 2020"
             },
-            correctAnswer: a3
+            correctAnswer: a6
           },
           {
-            question: "In which country did the Olympics originate?",
+            question: "The Olympic Torch is lit where each year?",
             answers: {
-              a: "India",
-              b: "Greece",
-              c: "Pakistan",
-              d: "U.S."
+              a: "Tokyo, Japan",
+              b: "Olympia, Greece",
+              c: "Paris, France",
+              d: "New Delhi, India"
             },
-            correctAnswer: a3
+            correctAnswer: a7
           },
           {
-            question: "In which country did the Olympics originate?",
+            question: " Which American athlete with a wooden leg won six gymnastics medals at the 1904 Olympics?",
             answers: {
-              a: "India",
-              b: "Greece",
-              c: "Pakistan",
-              d: "U.S."
+              a: "Archie Hahn",
+              b: "George Eyeser",
+              c: "Vitaly Scherbo",
+              d: "Andrea Keller"
             },
-            correctAnswer: a3
+            correctAnswer: a8
           },
           {
-            question: "In which country did the Olympics originate?",
+            question: " Which American Olympic athlete was later a prisoner of war in World War II?",
             answers: {
-              a: "India",
-              b: "Greece",
-              c: "Pakistan",
-              d: "U.S."
+              a: "Steven Redgrave",
+              b: "Brigit Fischer",
+              c: "Myer Prinstine",
+              d: "Louis Zamperini"
             },
-            correctAnswer: a3
+            correctAnswer: a9
           },
           {
-            question: "In which country did the Olympics originate?",
+            question: "Who is Neeraj Chopra's Current coach?",
             answers: {
-              a: "India",
-              b: "Greece",
-              c: "Pakistan",
-              d: "U.S."
+              a: "Kostic Palamas",
+              b: "Sudeer Babu",
+              c: "Uwe Hohn",
+              d: "Arjun Sarja"
             },
-            correctAnswer: a3
+            correctAnswer: a10
           }
       ];
     
