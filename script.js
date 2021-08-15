@@ -1,3 +1,18 @@
+window.onload = function(){
+    firebase.database().ref('Info').on("value", function(snapshot){
+        var a1 = snapshot.val().q1;
+        var a2 = snapshot.val().q2;
+        var a3 = snapshot.val().q3;
+        var a4 = snapshot.val().q4;
+        var a5 = snapshot.val().q5;
+        var a6 = snapshot.val().q6;
+        var a7 = snapshot.val().q7;
+        var a8 = snapshot.val().q8;
+        var a9 = snapshot.val().q9;
+        var a10 = snapshot.val().q10;
+    });
+};
+
 (function(){
     // Functions
     function buildQuiz(){
@@ -107,22 +122,24 @@
     const submitButton = document.getElementById('submit');
     const myQuestions = [
       {
-        question: "Who invented JavaScript?",
+        question: "How many gold medals have India won in olympics till now?",
         answers: {
-          a: "Douglas Crockford",
-          b: "Sheryl Sandberg",
-          c: "Brendan Eich"
+          a: "8",
+          b: "9",
+          c: "10",
+          d: "11"
         },
-        correctAnswer: "c"
+        correctAnswer: a1
       },
       {
-        question: "Which one of these is a JavaScript package manager?",
+        question: "In which year was softball introduced to the Olympics?",
         answers: {
-          a: "Node.js",
-          b: "TypeScript",
-          c: "npm"
+          a: "2008",
+          b: "2016",
+          c: "1947",
+          d: "1996"
         },
-        correctAnswer: "c"
+        correctAnswer: a2
       },
       {
         question: "Which tool can you use to ensure code quality?",
