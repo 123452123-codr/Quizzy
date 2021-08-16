@@ -1,11 +1,18 @@
-var fname = document.getElementById('fname');
-var mclass = document.getElementById('mclass');
-var date = document.getElementById('date');
+var fname = document.getElementById('fname').text;
+var mclass = document.getElementById('mclass').text;
+var date = document.getElementById('date').text;
 var next = document.getElementById('submitDetails');
 
 next.addEventListener("click", function(){
-    const text = {Name: fname, ClassOpted: mclass, SubmitDate: date};
-    const store = JSON.stringify(text);
-    localStorage.setItem("Details", store);
-    window.open("quiz.html","_self");
+    if(fname == null && mclass == null && date == null || fname != null && mclass == null && date == null || fname == null && mclass != null && date == null || fname == null && mclass == null && date != null || fname != null && mclass != null && date == null || fname == null && mclass != null && date != null || fname != null && mclass == null && date != null)
+    {
+        alert("Please fill out all the fields.");
+    }
+    else
+    {
+        const text = {Name: fname, ClassOpted: mclass, SubmitDate: date};
+        var database = firebase.database();
+        database.ref('Info').set(text);
+        window.open("quiz.html","_self");
+    }
 });

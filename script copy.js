@@ -152,9 +152,9 @@
             question: "What colors are the Olympic rings?",
             answers: {
               a: "Blue, yellow, black, green and red",
-              b: "Yellow, pink, green, red and blue",
-              c: "Black, green, white, blue and yellow",
-              d: "Red, blue, yellow, black and cyan"
+              b: "Yellow, black, green, red and blue",
+              c: "Black, green, red, blue and yellow",
+              d: "Red, blue, yellow, black and green"
             },
             correctAnswer: a4
           },
@@ -233,7 +233,26 @@
       showSlide(currentSlide);
     
       // Event listeners
-      submitButton.addEventListener('click', showResults);
+      submitButton.addEventListener('click', function(){
+        var ask = confirm("Are you sure you wish to submit this quiz?");
+        if(ask == true)
+        {
+          let text = localStorage.getItem("Details");
+          let data = JSON.parse(text);
+          var sendName = data.Name;
+          
+          database.ref(sendName).set(`${sendName} has scored ${numCorrect}`);
+          const boolean = 1;
+          const done = JSON.stringify(boolean);
+          localStorage.setItem("DoneSymbol", done);
+          
+          showResults
+        }
+        else
+        {
+          var waste = 2;
+        }
+      });
       previousButton.addEventListener("click", showPreviousSlide);
       nextButton.addEventListener("click", showNextSlide);
     });
