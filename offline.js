@@ -10,4 +10,4 @@ window.onload = function(){
     {
         waste = 2;
     }
-}
+};
