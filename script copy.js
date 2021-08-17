@@ -246,7 +246,7 @@
           const done = JSON.stringify(boolean);
           localStorage.setItem("DoneSymbol", done);
           
-          showResults
+          showResults();
         }
         else
         {

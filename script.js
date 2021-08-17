@@ -83,6 +83,9 @@
     
         // show number of correct answers out of total
         resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+        const text = {Score: numCorrect};
+        const send = JSON.stringify(text);
+        localStorage.setItem("ScoreOfUser", send);
       }
     
       function showSlide(n) {
@@ -233,7 +236,18 @@
       showSlide(currentSlide);
     
       // Event listeners
-      submitButton.addEventListener('click', showResults);
+      submitButton.addEventListener('click', function(){
+        let obj = localStorage.getItem("ScoreOfUser");
+        let parsed = JSON.parse(obj);
+        var ScoreUser = parsed.Score;
+
+        let abc = sessionStorage.getItem("Store");
+        let xyz = JSON.parse(abc);
+        var sendName = xyz.Name;
+
+        database.ref(sendName).set(ScoreUser);
+        showResults();
+      });
       previousButton.addEventListener("click", showPreviousSlide);
       nextButton.addEventListener("click", showNextSlide);
     });
