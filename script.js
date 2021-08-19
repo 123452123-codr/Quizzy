@@ -83,8 +83,8 @@
     
         // show number of correct answers out of total
         resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-        const text = {Score: numCorrect};
-        const send = JSON.stringify(text);
+        const textsend = {Score: numCorrect};
+        const send = JSON.stringify(textsend);
         localStorage.setItem("ScoreOfUser", send);
       }
     
@@ -238,15 +238,19 @@
       // Event listeners
       submitButton.addEventListener('click', function(){
         let obj = localStorage.getItem("ScoreOfUser");
-        let parsed = JSON.parse(obj);
-        var ScoreUser = parsed.Score;
+        let Info = JSON.parse(obj);
+        var ScoreUser = Info.Score;
 
         let abc = sessionStorage.getItem("Store");
         let xyz = JSON.parse(abc);
         var sendName = xyz.Name;
 
         database.ref(sendName).set(ScoreUser);
-        showResults();
+        const quizFinished = 1;
+        const text = {Done: quizFinished};
+        const object = JSON.stringify(text);
+        localStorage.setItem("Done", object);
+        showResults
       });
       previousButton.addEventListener("click", showPreviousSlide);
       nextButton.addEventListener("click", showNextSlide);
